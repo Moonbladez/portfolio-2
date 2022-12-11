@@ -10,7 +10,7 @@ interface RepoCardProps {
 
 export const RepoCard: FC<RepoCardProps> = ({ repo }) => {
   return (
-    <Card sx={{ maxWidth: 500, height: "100%" }}>
+    <Card sx={{ maxWidth: 500, height: "100%", display: "flex", flexDirection: "column" }}>
       <CardActionArea>
         <CardMedia component='img' height='300' image={repo.image} alt='green iguana' />
         <CardContent>
@@ -22,7 +22,7 @@ export const RepoCard: FC<RepoCardProps> = ({ repo }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+      <CardActions sx={{ display: "flex", justifyContent: "space-between", marginTop: "auto" }}>
         <Link variant='button' underline='none' color='secondary' href={repo.github} target='_blank' rel='noopener'>
           Github Repo
         </Link>
